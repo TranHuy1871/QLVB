@@ -1,0 +1,44 @@
+﻿@model QLVB.ViewModels.LoginViewModel
+
+@{
+    Layout = "";
+    var viewData = ViewData["returnUrl"] as String;
+    var returnUrl = viewData;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Đăng nhập </title>
+    <link href="~/css/login.css" rel="stylesheet" asp-append-version="true" />
+</head>
+<body style="margin: 150px 300px 0px 300px">
+    <center>
+        <div class="login">
+            <div class="title"> 
+                <h1>LOGIN</h1>
+            </div>
+            <div class="container">
+                <form asp-action="Login" asp-route-returnUrl="@returnUrl" method="Post" >
+                    <div class="textbox">
+                        <div>
+                            <label>Emai</label>
+                            <br />
+                            <input asp-for="Email" placeholder="email" />
+                        </div>
+                        <div>
+                            <label>Password</label>
+                            <br />
+                             <input asp-for="Password" placeholder="password" />
+                        </div>
+                    </div>
+                    <div style="margin: 20px 50px 0px 50px">
+                        <input type="submit" id="btn" class="btn" value="SIGN IN">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </center>
+</body>
+</html>

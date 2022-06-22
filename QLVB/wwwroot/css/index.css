@@ -1,0 +1,50 @@
+﻿#textbox {
+    border: 5px solid red;
+    width: 1000px;
+    overflow: auto;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+table {
+    border-collapse: collapse;
+    width: 1110px;
+    margin-top: 10px;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+}
+
+thead{
+    background: #0f86cb
+}
+
+.funtion{
+    width:auto;
+    height:auto;
+    border: 1px solid grey;
+    border-radius: 7px;
+}
+
+.funtion input{
+    margin: 20px 20px 0px 20px !important;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    margin-right: 900px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: #0e2de6;
+    color: aliceblue;
+}
+
+input{
+    margin: 20px 0px 0px 1000px;
+    width: 109px;
+}

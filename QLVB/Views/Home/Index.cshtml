@@ -1,0 +1,106 @@
+﻿@model IEnumerable<QLVB.Models.DataModels.VanBan>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int stt = 1;
+}
+
+<h1>Home</h1>
+
+<div>    
+        <label>Loại văn bản</label>
+        <input type="text" />
+        <label>Mã văn bản</label>
+        <input type="text" />
+        <label>Tên văn bản</label>
+        <input type="text" />
+        <input type="submit" value="Tìm kiếm" asp-action="Find" asp-route-id="1002"/>
+</div>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaVB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenVB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrichYeu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NgayNhan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaLoai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaDV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NgayKy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NguoiKy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrangThai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kieu)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @stt
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaVB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenVB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrichYeu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayNhan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaLoai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaDV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayKy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NguoiKy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrangThai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kieu)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MaVB">Edit</a> |
+                <a asp-action="Detail" asp-route-id="@item.MaVB">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MaVB">Delete</a>
+            </td>
+        </tr>
+        stt++;
+}
+    </tbody>
+</table>

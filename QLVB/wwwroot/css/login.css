@@ -1,0 +1,32 @@
+﻿.login {
+    width: 300px;
+    height: 300px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.textbox input {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+
+.btn {
+    width: 206px;
+    height: 40px;
+    background: #0622c8;
+    border: none;
+    color: aliceblue;
+    border-radius: 6px;
+}
+
+label{
+    display: inline-block;
+    float: left;
+    padding-left: 45px;
+}

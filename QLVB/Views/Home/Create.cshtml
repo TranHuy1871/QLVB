@@ -1,0 +1,84 @@
+﻿@model QLVB.Models.DataModels.VanBan
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<hr />
+<div class="row">
+
+    <div class="jumbotron">
+            <form asp-action="UpdateDataByFile" method="post" enctype="multipart/form-data">
+                <p class="display-3">Update by file!</p>
+                <hr class="m-y-md">
+                <p class="lead">
+                    <input type="file" accept="text/plain, .dat, .doc, .docx" name="dataFile" class="btn btn-primary btn-sm" />
+                </p>
+            </form>
+        </div>
+
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TenVB" class="control-label"></label>
+                <input asp-for="TenVB" class="form-control" />
+                <span asp-validation-for="TenVB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrichYeu" class="control-label"></label>
+                <input asp-for="TrichYeu" class="form-control" />
+                <span asp-validation-for="TrichYeu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NgayNhan" class="control-label"></label>
+                <input asp-for="NgayNhan" class="form-control" />
+                <span asp-validation-for="NgayNhan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaLoai" class="control-label"></label>
+                <input asp-for="MaLoai" class="form-control" />
+                <span asp-validation-for="MaLoai" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaDV" class="control-label"></label>
+                <input asp-for="MaDV" class="form-control" />
+                <span asp-validation-for="MaDV" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NgayKy" class="control-label"></label>
+                <input asp-for="NgayKy" class="form-control" />
+                <span asp-validation-for="NgayKy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NguoiKy" class="control-label"></label>
+                <input asp-for="NguoiKy" class="form-control" />
+                <span asp-validation-for="NguoiKy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrangThai" class="control-label"></label>
+                <input asp-for="TrangThai" class="form-control" />
+                <span asp-validation-for="TrangThai" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kieu" class="control-label"></label>
+                <input asp-for="Kieu" class="form-control" />
+                <span asp-validation-for="Kieu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
