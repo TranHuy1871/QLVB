@@ -9,7 +9,8 @@ namespace QLVB.Models.DataModels
     public class VanBan
     {
         [Key]
-        public int MaVB { get; set; }
+        public int Id { get; set; }
+        public string MaVB { get; set; }
         public string TenVB { get; set; }
         public string TrichYeu { get; set; }
         [DataType(DataType.Date)]

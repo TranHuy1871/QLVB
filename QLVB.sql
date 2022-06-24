@@ -22,9 +22,10 @@ values ('Admin', 'Bắc Ninh', 'Nam', '9', '0987654321', 'Quản lý', 'admin@gm
 go
 
 create table tb_VanBan(
-	MaVB int primary key identity,
+	ID int primary key identity,
+	MaVB nvarchar(50),
 	TenVB nvarchar (50),
-	TrichYeu nvarchar (50),
+	TrichYeu nvarchar (255),
 	NgayNhan datetime,
 	MaLoai nvarchar (10),
 	MaDV nvarchar (10),
