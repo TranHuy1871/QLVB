@@ -1,0 +1,83 @@
+﻿@section stylesheet{
+    <link rel="stylesheet" href="~/css/detail.css" />
+}
+@model Exam1.Models.DataModels.Stock
+
+<form method="POST" asp-action="UpdateStock" asp-route-id="@Model.Ma">
+    <div>
+        <input type="hidden" asp-for="Ma" />
+    </div>
+    <br />
+    <div>
+        <label>Trần</label>
+        <input asp-for="Tran" />
+        <label>TC</label>
+        <input asp-for="TC"/>
+        <label>Sàn</label>
+        <input asp-for="San" />
+    </div>
+    <br />
+    <div>
+        <label>G3</label>
+        <input asp-for="MuaG3" />
+        <label>KL3</label>
+        <input asp-for="MuaKL3" />
+        <label>G2</label>
+        <input asp-for="MuaG2" />
+        <label>KL2</label>
+        <input asp-for="MuaKL2" />
+        <label>G1</label>
+        <input asp-for="MuaG1" />
+        <label>KL1</label>
+        <input asp-for="MuaKL1" />
+    </div>
+    <br />
+    <div>
+        <label>Giá</label>
+        <input asp-for="KhopLenhGia" />
+        <label>Khối lượng</label>
+        <input asp-for="KhopLenhKL" />
+        <label>&#9666; +/- &#9656;</label>
+        <input asp-for="TileTangGiam" />
+    </div>
+    <br />
+    <div>
+        <label>G1</label>
+        <input asp-for="BanG1" />
+        <label>KL1</label>
+        <input asp-for="BanKL1" />
+        <label>G2</label>
+        <input asp-for="BanG2" />
+        <label>KL2</label>
+        <input asp-for="BanKL2" />
+        <label>G3</label>
+        <input asp-for="BanG3" />
+        <label>KL3</label>
+        <input asp-for="BanKL3" />
+    </div>
+    <br />
+    <div>
+        <label>Tổng KL</label>
+        <input asp-for="TongKL" />
+        <label>Mở cửa</label>
+        <input asp-for="MoCua" />
+        <label>Cao nhất</label>
+        <input asp-for="CaoNhat" />
+        <label>Thấp nhất</label>
+        <input asp-for="ThapNhat" />
+        <label>NN Mua</label>
+        <input asp-for="NNMua" />
+        <label>NN Bán</label>
+        <input asp-for="NNBan" />
+        <label>Room còn lại</label>
+        <input asp-for="Room" />
+    </div>
+    <br />
+    <div>
+        <input type="submit" id="updatedata" value="SUBMIT" />
+    </div>
+</form>
+
+@section Scripts{
+    <script src="~/js/admin.js" ></script>
+}

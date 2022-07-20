@@ -6,10 +6,11 @@
     int stt = 1;
 }
 
+
 <h1>Trang chính</h1>
 
 <div class="feature">    
-        <div>
+        @*<div>
             <label>Mã văn bản</label>
             <select>
                 <option>--Chọn--</option>
@@ -30,13 +31,13 @@
         </div>
         <div>
             <input type="submit" value="Tìm kiếm" asp-action="Find"/>
-        </div>
+        </div>*@
 </div>
 
 <p>
     <a asp-action="Create">Thêm</a>
 </p>
-<table class="table">
+<table id="example" class="display">
     <thead>
         <tr>
             <th>STT</th>
@@ -108,3 +109,11 @@
 }
     </tbody>
 </table>
+
+
+@section Scripts{
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+    <script src="~/js/index.js"></script>
+}

@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section stylesheet{
+    <link rel="stylesheet" href="~/css/table.css" />
+}
+
+@model List<Exam1.Models.DataModels.Stock>
+
+<div>
+    <div>
+        <table id="tb_Stock" style="display:block;margin: 0 auto;padding: 0;">
+            <thead>
+                <tr>
+                    <th rowspan="2">Mã</th>
+                    <th rowspan="2" class="staticArea">TC</th>
+                    <th rowspan="2" class="staticArea">Trần</th>
+                    <th rowspan="2" class="staticArea">Sàn</th>
+                    <th colspan="6">Mua</th>
+                    <th colspan="3" class="staticArea">Khớp lệnh</th>
+                    <th colspan="6">Bán</th>
+                    <th rowspan="2" class="staticArea">Tổng KL</th>
+                    <th rowspan="2" class="staticArea">Mở cửa</th>
+                    <th rowspan="2" class="staticArea">Cao nhất</th>
+                    <th rowspan="2" class="staticArea">Thấp nhất</th>
+                    <th rowspan="2" class="staticArea">NN mua</th>
+                    <th rowspan="2" class="staticArea">NN bán</th>
+                    <th rowspan="2" class="staticArea">Room còn lại</th>
+                </tr>
+                <tr>
+                    <th>G3</th>
+                    <th>KL3</th>
+                    <th>G2</th>
+                    <th>KL2</th>
+                    <th>G1</th>
+                    <th>KL1</th>
+                    <th class="staticArea">Giá</th>
+                    <th class="staticArea">KL</th>
+                    <th class="staticArea" style="white-space: nowrap;">
+                        &#9666; +/- &#9656;
+                    </th>
+                    <th>G1</th>
+                    <th>KL1</th>
+                    <th>G2</th>
+                    <th>KL2</th>
+                    <th>G3</th>
+                    <th>KL3</th>
+                </tr>
+            </thead>
+            <tbody>
+                @*@foreach (var stock in Model)
+                {
+                    <tr id = "@stock.Ma">
+						<td style="width: 6%"> <span> <input type="checkbox" /> <span>@stock.Ma}</span></span></td>
+						<td class="static">@stock.TC</td>
+						<td class="static">@stock.Tran</td>
+						<td class="static">@stock.San</td>
+						<td>@stock.MuaG3</td>
+						<td>@stock.MuaKL3</td>
+						<td>@stock.MuaG2</td>
+						<td>@stock.MuaKL2</td>
+						<td>@stock.MuaG1</td>
+						<td>@stock.MuaKL1</td>
+						<td class="static">@stock.KhopLenhGia</td>
+						<td class="static">@stock.KhopLenhKL</td>
+						<td class="static">@stock.TileTangGiam</td>
+						<td>@stock.BanG1</td>
+						<td>@stock.BanKL1</td>
+						<td>@stock.BanG2</td>
+						<td>@stock.BanKL2</td>
+						<td>@stock.BanG3</td>
+						<td>@stock.BanKL3</td>
+						<td class="static">@stock.TongKL</td>
+						<td class="static">@stock.MoCua</td>
+						<td class="static">@stock.CaoNhat</td>
+						<td class="static">@stock.ThapNhat</td>
+						<td class="static">@stock.NNMua</td>
+						<td class="static">@stock.NNBan</td>
+						<td class="static">@stock.Room</td>
+					</tr>
+                }*@
+            </tbody>
+        </table>
+    </div>
+    <br />
+</div>
+
+@section Scripts{
+    <script src="~/js/stock.js" asp-append-version="true"></script>
+}

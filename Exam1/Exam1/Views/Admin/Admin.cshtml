@@ -1,0 +1,68 @@
+﻿@section stylesheet{
+    <link rel="stylesheet" href="~/css/admin.css"/>
+}
+
+    @{
+    ViewData["Title"] = "Admin";
+    var ipAddress = ViewData["IpAddress"];
+    var browser = ViewData["browser"]; 
+}
+
+@model List<Exam1.Models.DataModels.Stock>
+<div>
+    <div>
+        <table id="tb_Stock">
+            <thead>
+                <tr>
+                    <th style="height: 40px">Mã</th>
+                    <th >TC</th>
+                    <th >Trần</th>
+                    <th >Sàn</th>
+                    <th >Tổng KL</>
+                    <th >Room còn lại</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var stock in Model)
+                {
+                    <tr id = "@stock.Ma">
+						<td >@stock.Ma </td>
+						<td >@stock.TC</td>
+						<td >@stock.Tran</td>
+						<td >@stock.San</td>
+						<td >@stock.TongKL</td>
+						<td >@stock.Room</td>
+						<td> <a asp-action="Detail" asp-route-id="@stock.Ma" class="btn btn-primary btn-sm">Detail</a> </td>
+					</tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <br />
+
+    <div>
+        <div class="card-header">
+            <p>
+                <span class="text-dark">Số lượng người dùng:</span>
+                <span id="online-count"></span>
+            </p>
+            <p>
+                <span class="text-dark">Số lượng connection:</span>
+                <span id="connections-count"></span>
+            </p>
+        </div>
+        <div class="card-body">
+            <h5>Thông tin người dùng</h5>
+            <p>
+                <span class="text-dark">IP:</span>
+                <span id="ip-info">@ipAddress</span>
+            </p>
+            <p>
+                <span class="text-dark">Browser:</span>
+                <span id="browser-info">@browser</span>
+            </p>
+        </div>
+    </div>
+
+</div>

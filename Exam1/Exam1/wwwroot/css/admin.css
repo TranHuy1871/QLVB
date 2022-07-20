@@ -1,0 +1,36 @@
+﻿table, th, td {
+    border: 1px solid #4b4b4b;
+    border-collapse: collapse;
+    background-color: #1d1d1d;
+    color: white;
+    text-align: center;
+}
+
+table{
+    width: 100%
+}
+
+input{
+    align-content: center;
+    width: 60px;
+    border-radius: 9%;
+    border: none;
+}
+
+.monitar {
+    display: block;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 70px;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 700px) {
+    .monitar {
+        position: static;
+        z-index: 0;
+        margin-top: 10px;
+    }
+}

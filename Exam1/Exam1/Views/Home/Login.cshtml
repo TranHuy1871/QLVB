@@ -1,0 +1,45 @@
+﻿@model Exam1.ViewModels.LoginViewModel
+
+@{
+    Layout = "";
+    var viewData = ViewData["returnUrl"] as String;
+    var returnUrl = viewData;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Đăng nhập </title>
+    <link href="~/css/login.css" rel="stylesheet" asp-append-version="true" />
+</head>
+<body style="margin: 150px 300px 0px 300px">
+    <center>
+        <div class="login">
+        <div class="title">
+                <h1>LOGIN</h1>
+            </div>
+            <div class="container">
+                <form asp-action="Login" asp-route-returnUrl="@returnUrl" method="Post">
+                    <div class="textbox">
+                        <div>
+                            <input asp-for="Email" placeholder="email" />
+                        </div>
+                        <div>
+                             <input asp-for="Password" placeholder="password" />
+                        </div>
+                    </div>
+                    <div class="rmb">
+                        <input asp-for="IsRememberMe" />
+                        <label asp-for="IsRememberMe">Keep me Signed in</label>
+                    </div>
+                    <div style="margin: 20px 50px 0px 50px">
+                        <input type="submit" id="btn" class="btn btn-primary" value="SIGN IN">
+                        @*<button id="btn" class="signin">SIGN IN</button>*@
+                    </div>
+                </form>
+            </div>
+    </div>
+    </center>
+</body>
+</html>

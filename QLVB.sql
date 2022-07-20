@@ -39,13 +39,13 @@ go
 
 
 insert into tb_VanBan values
-('A','A','7/7/2001','A','A','8/8/2001','A','Van ban di', 'Bao cao'),
-('Bb','Bb','9/9/2001','Bb','Bb','10/10/2001','Bb','Van ban den', 'Chi thi'),
-('C','A','7/3/2002','C','D','4/5/2002','A','Van ban den', 'Cong van'),
-('D','I','7/17/2003','P','A','8/2/2003','A','Van ban di', 'Cong van'),
-('H','A','8/17/2004','U','G','8/18/2004','A','Van ban den', 'Chi thi'),
-('P','A','2/27/2005','U','H','5/8/2005','A','Van ban di', 'Cong van'),
-('E','A','1/2/2006','E','J','9/8/2006','A','Van ban di', 'Bao cao')
+('Văn bản thực hiện','A','7/7/2001','A','BGD','8/8/2001','Trần Văn A','Van ban di', 'Bao cao'),
+('Văn bản A','Bb','9/9/2001','Bb','BGD','10/10/2001','Nguyễn Thị Bb','Van ban den', 'Chi thi'),
+('Văn bản C','A','7/3/2002','C','BGD','4/5/2002','Lê Văn C','Van ban den', 'Cong van'),
+('Văn bản D','I','7/17/2003','P','BGD','8/2/2003','Nguyễn Văn D','Van ban di', 'Cong van'),
+('Văn bản H','A','8/17/2004','U','BGD','8/18/2004','Đàm Đức E','Van ban den', 'Chi thi'),
+('Văn bản P','A','2/27/2005','U','BGD','5/8/2005','Ngô Thị F','Van ban di', 'Cong van'),
+('Văn bản E','A','1/2/2006','E','BGD','9/8/2006','Trần Quang Huy','Van ban di', 'Bao cao')
 go
 
 drop table tb_VanBan
